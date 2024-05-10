@@ -199,31 +199,34 @@ class HomePage extends StatelessWidget {
                       horizontal: 30,
                       vertical: 20,
                     ),
-                    child: Row(
-                      children: [
-                        const SizedBox(width: 30),
-                        Container(
-                          width: 150,
-                          height: 150,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                              image: AssetImage(_images[index].imagePath),
-                              fit: BoxFit.cover,
-                            )
+                    child: Hero(
+                      tag: 'logo$index',
+                      child: Row(
+                        children: [
+                          const SizedBox(width: 30),
+                          Container(
+                            width: 150,
+                            height: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              image: DecorationImage(
+                                image: AssetImage(_images[index].imagePath),
+                                fit: BoxFit.cover,
+                              )
+                            ),
                           ),
-                        ),
-                        const SizedBox(width: 50,),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(_images[index].place),
-                              Text(_images[index].location)
-                            ],
-                          ),
-                        )
-                      ],
+                          const SizedBox(width: 50,),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(_images[index].place),
+                                Text(_images[index].location)
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 );

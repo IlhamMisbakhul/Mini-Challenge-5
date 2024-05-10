@@ -71,8 +71,8 @@ class DetailsPage extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Icon(Icons.calendar_month),
-                              SizedBox(
+                              const Icon(Icons.calendar_month),
+                              const SizedBox(
                                 width: 5,
                               ),
                               Text(
@@ -85,8 +85,8 @@ class DetailsPage extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Icon(Icons.attach_money_rounded),
-                              SizedBox(
+                              const Icon(Icons.attach_money_rounded),
+                              const SizedBox(
                                 width: 5,
                               ),
                               Text(
@@ -118,11 +118,11 @@ class DetailsPage extends StatelessWidget {
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                icon: Icon(Icons.arrow_back),)),
+                                icon: const Icon(Icons.arrow_back),)),
                         const SizedBox(
                           width: 15,
                         ),
-                        Expanded(
+                        const Expanded(
                           child: LikeButton()
                         ),
                       ],
@@ -139,12 +139,12 @@ class DetailsPage extends StatelessWidget {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text('WISATA BANDUNG',
+              const Text('WISATA BANDUNG',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
@@ -174,22 +174,23 @@ class DetailsPage extends StatelessWidget {
                             padding: const EdgeInsets.all(10.0),
                             child: Column(
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Text(
                                   place,
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontSize: 20, fontWeight: FontWeight.bold),
+                                  style: const TextStyle(
+                                    color: Colors.lightBlueAccent,
+                                    fontSize: 24, fontWeight: FontWeight.bold),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
                                   children: [
-                                    Icon(Icons.calendar_month),
-                                    SizedBox(
+                                    const Icon(Icons.calendar_month),
+                                    const SizedBox(
                                       width: 5,
                                     ),
                                     Expanded(
@@ -201,18 +202,18 @@ class DetailsPage extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Expanded(
+                                    const Expanded(
                                         child: SizedBox(
                                       width: 300,
                                     )),
-                                    LikeButton()
+                                    const LikeButton()
                                   ],
                                 ),
-                                SizedBox(height: 5),
+                                const SizedBox(height: 5),
                                 Row(
                                   children: [
-                                    Icon(Icons.attach_money_rounded),
-                                    SizedBox(
+                                    const Icon(Icons.attach_money_rounded),
+                                    const SizedBox(
                                       width: 5,
                                     ),
                                     Expanded(
@@ -226,7 +227,7 @@ class DetailsPage extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 20),
+                                const SizedBox(height: 20),
                                 Text(
                                   details,
                                   textAlign: TextAlign.justify,
