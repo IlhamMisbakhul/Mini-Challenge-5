@@ -24,7 +24,7 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth < 614) {
+      if (constraints.maxWidth < 600) {
         return Container(
           child: Column(
             children: <Widget>[
@@ -106,6 +106,7 @@ class DetailsPage extends StatelessWidget {
                             style: const TextStyle(
                               fontSize: 14,
                             ),
+                            textAlign: TextAlign.justify,
                           ),
                         ],
                       ),
@@ -149,12 +150,15 @@ class DetailsPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 400,
-                    height: 300,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(imagePath), fit: BoxFit.cover)),
+                  Hero(
+                    tag: 'logo$index',
+                    child: Container(
+                      width: 400,
+                      height: 300,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage(imagePath), fit: BoxFit.cover)),
+                    ),
                   ),
                   SizedBox(
                     width: constraints.maxWidth * 0.01,
@@ -166,69 +170,69 @@ class DetailsPage extends StatelessWidget {
                       child: Card(
                         color: Colors.white,
                         child: SingleChildScrollView(
-                          child: Column(
-                            children: [
-                              Padding(
-                                  padding:
-                                      EdgeInsets.only(left: 100, right: 100)),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                place,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Row(
-                                children: [
-                                  Icon(Icons.calendar_month),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Expanded(
-                                    child: Text(
-                                      open,
-                                      style: const TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w400,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  place,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 20, fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(Icons.calendar_month),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Expanded(
+                                      child: Text(
+                                        open,
+                                        style: const TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w400,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Expanded(
-                                      child: SizedBox(
-                                    width: 300,
-                                  )),
-                                  LikeButton()
-                                ],
-                              ),
-                              SizedBox(height: 5),
-                              Row(
-                                children: [
-                                  Icon(Icons.attach_money_rounded),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Expanded(
-                                    child: Text(
-                                      price,
-                                      style: const TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w400,
+                                    Expanded(
+                                        child: SizedBox(
+                                      width: 300,
+                                    )),
+                                    LikeButton()
+                                  ],
+                                ),
+                                SizedBox(height: 5),
+                                Row(
+                                  children: [
+                                    Icon(Icons.attach_money_rounded),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Expanded(
+                                      child: Text(
+                                        price,
+                                        style: const TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w400,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 20),
-                              Text(
-                                details,
-                                textAlign: TextAlign.justify,
-                              )
-                            ],
+                                  ],
+                                ),
+                                SizedBox(height: 20),
+                                Text(
+                                  details,
+                                  textAlign: TextAlign.justify,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),

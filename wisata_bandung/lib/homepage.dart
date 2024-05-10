@@ -165,7 +165,12 @@ class HomePage extends StatelessWidget {
             bottomRight: Radius.circular(15)
           )
         ),
-        title: const Text('Gallery'),
+        title: const Text(
+          'WISATA BANDUNG',
+          style: TextStyle(
+            fontWeight: FontWeight.bold
+          ),
+        ),
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
@@ -198,8 +203,8 @@ class HomePage extends StatelessWidget {
                       children: [
                         const SizedBox(width: 30),
                         Container(
-                          width: 100,
-                          height: 100,
+                          width: 150,
+                          height: 150,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             image: DecorationImage(
