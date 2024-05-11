@@ -142,8 +142,24 @@ class DetailsPage extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              const Text('WISATA BANDUNG',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  IconButton(
+                    onPressed: (){
+                      Navigator.pop(context);
+                    }, 
+                    icon: const Icon(Icons.arrow_back)
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  const Text('WISATA BANDUNG',
+                      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                ],
+              ),
               const SizedBox(
                 height: 30,
               ),
