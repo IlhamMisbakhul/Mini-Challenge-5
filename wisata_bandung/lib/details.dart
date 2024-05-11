@@ -147,99 +147,103 @@ class DetailsPage extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Hero(
-                    tag: 'logo$index',
-                    child: Container(
-                      width: 400,
-                      height: 300,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage(imagePath), fit: BoxFit.cover)),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Hero(
+                      tag: 'logo$index',
+                      child: Container(
+                        width: 480,
+                        height: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage(imagePath), fit: BoxFit.cover)),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: constraints.maxWidth * 0.01,
-                  ),
-                  Container(
-                    width: constraints.maxWidth * 0.3,
-                    height: 300,
-                    child: Expanded(
-                      child: Card(
-                        color: Colors.white,
-                        child: SingleChildScrollView(
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Column(
-                              children: [
-                                const SizedBox(
-                                  height: 20,
-                                ),
-                                Text(
-                                  place,
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(
-                                    color: Colors.lightBlueAccent,
-                                    fontSize: 24, fontWeight: FontWeight.bold),
-                                ),
-                                const SizedBox(
-                                  height: 20,
-                                ),
-                                Row(
-                                  children: [
-                                    const Icon(Icons.calendar_month),
-                                    const SizedBox(
-                                      width: 5,
-                                    ),
-                                    Expanded(
-                                      child: Text(
-                                        open,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    SizedBox(
+                      width: 480,
+                      height: 360,
+                      child: Expanded(
+                        child: Card(
+                          color: Colors.white,
+                          child: SingleChildScrollView(
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                children: [
+                                  const SizedBox(
+                                    height: 20,
+                                  ),
+                                  Text(
+                                    place,
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(
+                                      color: Colors.lightBlueAccent,
+                                      fontSize: 24, fontWeight: FontWeight.bold),
+                                  ),
+                                  const SizedBox(
+                                    height: 20,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Icon(Icons.calendar_month),
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      Expanded(
+                                        child: Text(
+                                          open,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    const Expanded(
-                                        child: SizedBox(
-                                      width: 300,
-                                    )),
-                                    const LikeButton()
-                                  ],
-                                ),
-                                const SizedBox(height: 5),
-                                Row(
-                                  children: [
-                                    const Icon(Icons.attach_money_rounded),
-                                    const SizedBox(
-                                      width: 5,
-                                    ),
-                                    Expanded(
-                                      child: Text(
-                                        price,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400,
+                                      const Expanded(
+                                          child: SizedBox(
+                                        width: 300,
+                                      )),
+                                      const LikeButton()
+                                    ],
+                                  ),
+                                  const SizedBox(height: 5),
+                                  Row(
+                                    children: [
+                                      const Icon(Icons.attach_money_rounded),
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      Expanded(
+                                        child: Text(
+                                          price,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 20),
-                                Text(
-                                  details,
-                                  textAlign: TextAlign.justify,
-                                )
-                              ],
+                                    ],
+                                  ),
+                                  const SizedBox(height: 20),
+                                  Text(
+                                    details,
+                                    textAlign: TextAlign.justify,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               )
             ],
           )),
