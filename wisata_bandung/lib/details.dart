@@ -143,6 +143,7 @@ class DetailsPage extends StatelessWidget {
                 height: 30,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const SizedBox(
                     width: 20,
@@ -156,8 +157,11 @@ class DetailsPage extends StatelessWidget {
                   const SizedBox(
                     width: 30,
                   ),
-                  const Text('WISATA BANDUNG',
-                      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                  const Text(
+                    'WISATA BANDUNG',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
               const SizedBox(
