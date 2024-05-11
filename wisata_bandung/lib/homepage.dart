@@ -199,12 +199,12 @@ class HomePage extends StatelessWidget {
                       horizontal: 30,
                       vertical: 20,
                     ),
-                    child: Hero(
-                      tag: 'logo$index',
-                      child: Row(
-                        children: [
-                          const SizedBox(width: 30),
-                          Container(
+                    child: Row(
+                      children: [
+                        const SizedBox(width: 30),
+                        Hero(
+                          tag: 'logo$index',
+                          child: Container(
                             width: 150,
                             height: 150,
                             decoration: BoxDecoration(
@@ -215,18 +215,18 @@ class HomePage extends StatelessWidget {
                               )
                             ),
                           ),
-                          const SizedBox(width: 50,),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(_images[index].place),
-                                Text(_images[index].location)
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+                        ),
+                        const SizedBox(width: 50,),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(_images[index].place),
+                              Text(_images[index].location)
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 );
