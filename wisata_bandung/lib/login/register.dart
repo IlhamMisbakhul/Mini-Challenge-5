@@ -105,7 +105,7 @@ class _RegisterAppState extends State<RegisterApp> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('Already Have an Account'),
+                  const Text('Already Have an Account?'),
                   const SizedBox(width: 2,),
                   TextButton(
                     onPressed: (){
