@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "284778815372",
+    "project_id": "wisatabandung-d66b7",
+    "storage_bucket": "wisatabandung-d66b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284778815372:android:aa997add75d018919040a9",
+        "android_client_info": {
+          "package_name": "com.example.wisata_bandung"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpsttheC_XQ0IzsVkDfwp7jVArZC_0HBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -23,7 +23,9 @@ class DetailsPage extends StatelessWidget {
       required this.index});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: LayoutBuilder(builder: (context, constraints) {
       if (constraints.maxWidth < 600) {
         return Container(
           child: Column(
@@ -37,7 +39,7 @@ class DetailsPage extends StatelessWidget {
                           bottomLeft: Radius.circular(30),
                           bottomRight: Radius.circular(30)),
                       image: DecorationImage(
-                        image: AssetImage(imagePath),
+                        image: NetworkImage(imagePath),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -55,12 +57,23 @@ class DetailsPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text(
-                            place,
-                            style: const TextStyle(
-                              color: Colors.lightBlueAccent,
-                              fontSize: 22,
-                              fontWeight: FontWeight.w600,
+                          Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  place,
+                                  style: const TextStyle(
+                                    color: Colors.lightBlueAccent,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                const Spacer(),
+                                IconButton(
+                                  onPressed: (){}, 
+                                  icon: Icon(Icons.share))
+                              ],
                             ),
                           ),
                           Text(
@@ -180,7 +193,7 @@ class DetailsPage extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(
-                                image: AssetImage(imagePath), fit: BoxFit.cover)),
+                                image: NetworkImage(imagePath), fit: BoxFit.cover)),
                       ),
                     ),
                     const SizedBox(
@@ -200,12 +213,22 @@ class DetailsPage extends StatelessWidget {
                                   const SizedBox(
                                     height: 20,
                                   ),
-                                  Text(
-                                    place,
-                                    textAlign: TextAlign.center,
-                                    style: const TextStyle(
-                                      color: Colors.lightBlueAccent,
-                                      fontSize: 24, fontWeight: FontWeight.bold),
+                                  Center(
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          place,
+                                          textAlign: TextAlign.center,
+                                          style: const TextStyle(
+                                            color: Colors.lightBlueAccent,
+                                            fontSize: 24, fontWeight: FontWeight.bold),
+                                        ),
+                                        Spacer(),
+                                        IconButton(
+                                          onPressed: (){}, 
+                                          icon: Icon(Icons.share))
+                                      ],
+                                    ),
                                   ),
                                   const SizedBox(
                                     height: 20,
@@ -225,10 +248,7 @@ class DetailsPage extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      const Expanded(
-                                          child: SizedBox(
-                                        width: 300,
-                                      )),
+                                      Spacer(),
                                       const LikeButton()
                                     ],
                                   ),
