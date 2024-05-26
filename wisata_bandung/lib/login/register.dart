@@ -93,7 +93,7 @@ class _RegisterAppState extends State<RegisterApp> {
           
               MyTextField(
                 controller: confirmpasswordController,
-                hintText: 'confirm Password',
+                hintText: 'Confirm Password',
                 obscureText: true,
               ),
               const SizedBox(height: 25,),
