@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:http/http.dart' as http;
 import 'package:wisata_bandung/screen/details.dart';
 
 List<ImageDetails> _images = [
@@ -108,7 +107,7 @@ List<ImageDetails> _images = [
     ),
   ImageDetails(
     imagePath: 'https://glints.com/id/lowongan/wp-content/uploads/2024/01/F807786F-8BA4-4C6B-99F3-C01EFF5C9817.jpeg',
-    price: 'Rp 20.000 (hari biasa) Rp 30.000 (hari kerja) (note : dari webnya glints.com nya begitu), mungkin hari libur maksudnya?',
+    price: 'Rp 20.000 (hari biasa) Rp 30.000 (hari libur)',
     place: 'Tangkuban Perahu',
     location: 'Lembang, Kabupaten Bandung Barat',
     open: '11.00 – 20.00',
@@ -163,10 +162,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(15),
-                bottomRight: Radius.circular(15))),
+        iconTheme: IconThemeData(
+          color: Colors.white
+        ),
         title: Text(
           'WISATA BANDUNG',
           style: TextStyle(
@@ -209,12 +207,12 @@ class HomePage extends StatelessWidget {
                     index: index,
                     child: Row(
                       children: [
-                        const SizedBox(width: 30,),
+                        const SizedBox(width: 10,),
                         Hero(
                           tag: 'logo$index',
                           child: Container(
-                            width: 150,
-                            height: 150,
+                            width: 125,
+                            height: 125,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 image: DecorationImage(
@@ -224,7 +222,7 @@ class HomePage extends StatelessWidget {
                                 )),
                           ),
                         ),
-                        const SizedBox(width: 50),
+                        const SizedBox(width: 20),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

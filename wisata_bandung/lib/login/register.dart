@@ -55,6 +55,12 @@ class _RegisterAppState extends State<RegisterApp> {
             child: Text(
               message,
               style: const TextStyle(color: Colors.black),)),
+          content: const Text('Please Login If You Doesn\'t Have Any Account'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context), 
+              child: const Text('OK'))
+          ],
         );
     },);
   }

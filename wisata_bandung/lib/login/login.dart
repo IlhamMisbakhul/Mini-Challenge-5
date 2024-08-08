@@ -37,7 +37,7 @@ class _LoginAppState extends State<LoginApp> {
     }on FirebaseAuthException catch (e){
 
       Navigator.pop(context);
-      errorMessage(e.code);
+      errorMessage('This Page Says ${e.code}');
     }
   }
 
@@ -50,7 +50,15 @@ class _LoginAppState extends State<LoginApp> {
           title: Center(
             child: Text(
               message,
-              style: const TextStyle(color: Colors.black),)),
+              style: const TextStyle(color: Colors.white),)),
+          content: const Text('Please Register If You Doesn\'t Have Any Account',
+          style: TextStyle(color: Colors.white),),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context), 
+              child: const Text('OK',
+              style: TextStyle(color: Colors.white),))
+          ],
         );
     },);
   }
@@ -71,7 +79,6 @@ class _LoginAppState extends State<LoginApp> {
                     image: AssetImage('images/logo.png'))
                 ),
               ),
-                      
               const Text('Welcome, please login to access our apps',
               style: TextStyle(
                 fontSize: 16
