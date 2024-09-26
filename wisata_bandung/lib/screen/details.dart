@@ -198,7 +198,7 @@ class DetailsPage extends StatelessWidget {
                           Hero(
                             tag: 'logo$index',
                             child: Container(
-                              width: 300,
+                              width: 350,
                               height: 230,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
@@ -211,7 +211,7 @@ class DetailsPage extends StatelessWidget {
                             width: 20,
                           ),
                           SizedBox(
-                            width: 380,
+                            width: 400,
                             height: 230,
                             child: Card(
                               color: Colors.white,
